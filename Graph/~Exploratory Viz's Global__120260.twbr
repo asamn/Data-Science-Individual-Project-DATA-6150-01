@@ -1,0 +1,784 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0807.0327                               -->
+<workbook original-version='18.1' source-build='2024.2.2 (20242.24.0807.0327)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='anxiety data+' inline='true' name='federated.1j79kp90o32tyk1dedvzz1v95pz2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='depression anxiety data' name='excel-direct.0g0oba91gv4udm1dbo03u1fgr5p8'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/sama1/Downloads/fuckoff/DATA/Data-Science-Individual-Project-DATA-6150-01/Data/depression_anxiety_data.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='share-of-individuals-using-the-internet' name='excel-direct.031uui003j4tma14pi71u1lus6sm'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/sama1/Downloads/fuckoff/DATA/Data-Science-Individual-Project-DATA-6150-01/Data/share_of_individuals_using_the_internet.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='social media 2012-2014' name='excel-direct.1kj33q702y7uil1ayma9n14wf8jf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/sama1/Downloads/fuckoff/DATA/Data-Science-Individual-Project-DATA-6150-01/Data/social_media_2012_2014.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1kj33q702y7uil1ayma9n14wf8jf' name='Data' table='[Data$]' type='table'>
+          <columns gridOrigin='A1:B14:no:A1:B14:0' header='yes' outcome='6'>
+            <column datatype='integer' name='year' ordinal='0' />
+            <column datatype='integer' name='avg daily time spent globally (min)' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.0g0oba91gv4udm1dbo03u1fgr5p8' name='depression anxiety data' table='[&apos;depression anxiety data$&apos;]' type='table'>
+            <columns gridOrigin='A1:F385:no:A1:F385:0' header='yes' outcome='6'>
+              <column datatype='string' name='location' ordinal='0' />
+              <column datatype='string' name='sex' ordinal='1' />
+              <column datatype='string' name='age' ordinal='2' />
+              <column datatype='integer' name='year' ordinal='3' />
+              <column datatype='real' name='depression %' ordinal='4' />
+              <column datatype='real' name='anxiety %' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1kj33q702y7uil1ayma9n14wf8jf' name='Data' table='[Data$]' type='table'>
+            <columns gridOrigin='A1:B14:no:A1:B14:0' header='yes' outcome='6'>
+              <column datatype='integer' name='year' ordinal='0' />
+              <column datatype='integer' name='avg daily time spent globally (min)' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.031uui003j4tma14pi71u1lus6sm' name='share-of-individuals-using-the-' table='[&apos;share-of-individuals-using-the-$&apos;]' type='table'>
+            <columns gridOrigin='A1:C6956:no:A1:C6956:0' header='yes' outcome='6'>
+              <column datatype='string' name='location' ordinal='0' />
+              <column datatype='integer' name='Year' ordinal='1' />
+              <column datatype='real' name='Individuals using the Internet (% of population)' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Individuals using the Internet (% of population)]' value='[share-of-individuals-using-the-].[Individuals using the Internet (% of population)]' />
+          <map key='[Year]' value='[share-of-individuals-using-the-].[Year]' />
+          <map key='[age]' value='[depression anxiety data].[age]' />
+          <map key='[anxiety %]' value='[depression anxiety data].[anxiety %]' />
+          <map key='[avg daily time spent globally (min)]' value='[Data].[avg daily time spent globally (min)]' />
+          <map key='[depression %]' value='[depression anxiety data].[depression %]' />
+          <map key='[location (share-of-individuals-using-the-)]' value='[share-of-individuals-using-the-].[location]' />
+          <map key='[location]' value='[depression anxiety data].[location]' />
+          <map key='[sex]' value='[depression anxiety data].[sex]' />
+          <map key='[year (Data)]' value='[Data].[year]' />
+          <map key='[year]' value='[depression anxiety data].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[depression anxiety data]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F385:no:A1:F385:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B14:no:A1:B14:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[share-of-individuals-using-the-]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C6956:no:A1:C6956:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[depression anxiety data]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sex</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[sex]</local-name>
+            <parent-name>[depression anxiety data]</parent-name>
+            <remote-alias>sex</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[depression anxiety data]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[depression anxiety data]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>depression %</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[depression %]</local-name>
+            <parent-name>[depression anxiety data]</parent-name>
+            <remote-alias>depression %</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>anxiety %</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[anxiety %]</local-name>
+            <parent-name>[depression anxiety data]</parent-name>
+            <remote-alias>anxiety %</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year (Data)]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_E28B3EC1C148428C96CDB6FA3BC7F70E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg daily time spent globally (min)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[avg daily time spent globally (min)]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>avg daily time spent globally (min)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_E28B3EC1C148428C96CDB6FA3BC7F70E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[location (share-of-individuals-using-the-)]</local-name>
+            <parent-name>[share-of-individuals-using-the-]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[share-of-individuals-using-the-_D7FA1A6FF83745C7ABAC5B5999B4BF06]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[share-of-individuals-using-the-]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[share-of-individuals-using-the-_D7FA1A6FF83745C7ABAC5B5999B4BF06]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Individuals using the Internet (% of population)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Individuals using the Internet (% of population)]</local-name>
+            <parent-name>[share-of-individuals-using-the-]</parent-name>
+            <remote-alias>Individuals using the Internet (% of population)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[share-of-individuals-using-the-_D7FA1A6FF83745C7ABAC5B5999B4BF06]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Individuals using the Internet (% of population)1' datatype='real' name='[Individuals using the Internet (% of population)]' role='measure' type='quantitative' />
+      <column caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Data' datatype='table' name='[__tableau_internal_object_id__].[Data_E28B3EC1C148428C96CDB6FA3BC7F70E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='depression anxiety data' datatype='table' name='[__tableau_internal_object_id__].[depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='share-of-individuals-using-the-' datatype='table' name='[__tableau_internal_object_id__].[share-of-individuals-using-the-_D7FA1A6FF83745C7ABAC5B5999B4BF06]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+      <column caption='Anxiety %' datatype='real' name='[anxiety %]' role='measure' type='quantitative' />
+      <column caption='Avg Daily Time Spent Globally (Min)' datatype='integer' name='[avg daily time spent globally (min)]' role='measure' type='quantitative' />
+      <column caption='Depression %' datatype='real' name='[depression %]' role='measure' type='quantitative' />
+      <column caption='Location (Share-Of-Individuals-Using-The-)' datatype='string' name='[location (share-of-individuals-using-the-)]' role='dimension' type='nominal' />
+      <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+      <column caption='Sex' datatype='string' name='[sex]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[year (Data)]' role='dimension' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[age]' derivation='None' name='[none:age:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:age:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;45-49 years&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;&lt;20 years&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;20-24 years&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;15-19 years&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;30-34 years&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;70+ years&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;35-39 years&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;10-14 years&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;25-29 years&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;40-44 years&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Age-standardized&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;50-69 years&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Data' id='Data_E28B3EC1C148428C96CDB6FA3BC7F70E'>
+            <properties context=''>
+              <relation connection='excel-direct.1kj33q702y7uil1ayma9n14wf8jf' name='Data' table='[Data$]' type='table'>
+                <columns gridOrigin='A1:B14:no:A1:B14:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='year' ordinal='0' />
+                  <column datatype='integer' name='avg daily time spent globally (min)' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='depression anxiety data' id='depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC'>
+            <properties context=''>
+              <relation connection='excel-direct.0g0oba91gv4udm1dbo03u1fgr5p8' name='depression anxiety data' table='[&apos;depression anxiety data$&apos;]' type='table'>
+                <columns gridOrigin='A1:F385:no:A1:F385:0' header='yes' outcome='6'>
+                  <column datatype='string' name='location' ordinal='0' />
+                  <column datatype='string' name='sex' ordinal='1' />
+                  <column datatype='string' name='age' ordinal='2' />
+                  <column datatype='integer' name='year' ordinal='3' />
+                  <column datatype='real' name='depression %' ordinal='4' />
+                  <column datatype='real' name='anxiety %' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='share-of-individuals-using-the-' id='share-of-individuals-using-the-_D7FA1A6FF83745C7ABAC5B5999B4BF06'>
+            <properties context=''>
+              <relation connection='excel-direct.031uui003j4tma14pi71u1lus6sm' name='share-of-individuals-using-the-' table='[&apos;share-of-individuals-using-the-$&apos;]' type='table'>
+                <columns gridOrigin='A1:C6956:no:A1:C6956:0' header='yes' outcome='6'>
+                  <column datatype='string' name='location' ordinal='0' />
+                  <column datatype='integer' name='Year' ordinal='1' />
+                  <column datatype='real' name='Individuals using the Internet (% of population)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[year]' />
+              <expression op='[year (Data)]' />
+            </expression>
+            <first-end-point object-id='depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC' />
+            <second-end-point object-id='Data_E28B3EC1C148428C96CDB6FA3BC7F70E' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[location]' />
+                <expression op='[location (share-of-individuals-using-the-)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[year]' />
+                <expression op='[Year]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='depression anxiety data_D3D76550775347F69EB6FFC03C62A1CC' />
+            <second-end-point object-id='share-of-individuals-using-the-_D7FA1A6FF83745C7ABAC5B5999B4BF06' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Anxiety vs Internet'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Internet vs Anxiety</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='anxiety data+' name='federated.1j79kp90o32tyk1dedvzz1v95pz2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j79kp90o32tyk1dedvzz1v95pz2'>
+            <column caption='Individuals using the Internet (% of population)1' datatype='real' name='[Individuals using the Internet (% of population)]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+            <column caption='Anxiety %' datatype='real' name='[anxiety %]' role='measure' type='quantitative' />
+            <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[Individuals using the Internet (% of population)]' derivation='None' name='[none:Individuals using the Internet (% of population):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:nk]' pivot='key' type='nominal' />
+            <column-instance column='[anxiety %]' derivation='None' name='[none:anxiety %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[location]' derivation='None' name='[none:location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]'>
+            <groupfilter function='member' level='[none:age:nk]' member='&quot;&lt;20 years&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:location:nk]'>
+            <groupfilter function='member' level='[none:location:nk]' member='&quot;Global&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]' included-values='in-range'>
+            <min>1990</min>
+            <max>2019</max>
+          </filter>
+          <slices>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]</column>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:location:nk]</column>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:Individuals using the Internet (% of population):qk]' field-type='quantitative' max='101.60297934403856' min='-72.164551531327561' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:Individuals using the Internet (% of population):qk]' scope='cols' value='Individuals using the Internet (% of population)' />
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:anxiety %:qk]' field-type='quantitative' max='4.2946893239626087' min='2.0637349611380729' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]' />
+              <lod column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:location:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:anxiety %:qk]</rows>
+        <cols>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:Individuals using the Internet (% of population):qk]</cols>
+      </table>
+      <simple-id uuid='{7F5F1E03-B205-4A8A-8E7C-89C01AA0D9B0}' />
+    </worksheet>
+    <worksheet name='Anxiety vs Social Media Minutes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='anxiety data+' name='federated.1j79kp90o32tyk1dedvzz1v95pz2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j79kp90o32tyk1dedvzz1v95pz2'>
+            <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+            <column caption='Anxiety %' datatype='real' name='[anxiety %]' role='measure' type='quantitative' />
+            <column caption='Avg Daily Time Spent Globally (Min)' datatype='integer' name='[avg daily time spent globally (min)]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:nk]' pivot='key' type='nominal' />
+            <column-instance column='[anxiety %]' derivation='None' name='[none:anxiety %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg daily time spent globally (min)]' derivation='None' name='[none:avg daily time spent globally (min):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year (Data)]' derivation='None' name='[none:year (Data):qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[year (Data)]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]'>
+            <groupfilter function='member' level='[none:age:nk]' member='&quot;15-19 years&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year (Data):qk]' included-values='in-range'>
+            <min>2012</min>
+            <max>2019</max>
+          </filter>
+          <slices>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]</column>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year (Data):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:avg daily time spent globally (min):qk]' field-type='quantitative' max='219' min='-23' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:anxiety %:qk]' field-type='quantitative' max='4.6009986140292529' min='4.4270658957927571' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:anxiety %:qk]</rows>
+        <cols>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:avg daily time spent globally (min):qk]</cols>
+      </table>
+      <simple-id uuid='{D8ED9665-207B-4F21-9AFD-DAF3D1B89B4F}' />
+    </worksheet>
+    <worksheet name='Depression vs Internet'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Internet vs Anxiety</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='anxiety data+' name='federated.1j79kp90o32tyk1dedvzz1v95pz2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j79kp90o32tyk1dedvzz1v95pz2'>
+            <column caption='Individuals using the Internet (% of population)1' datatype='real' name='[Individuals using the Internet (% of population)]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+            <column caption='Depression %' datatype='real' name='[depression %]' role='measure' type='quantitative' />
+            <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[Individuals using the Internet (% of population)]' derivation='None' name='[none:Individuals using the Internet (% of population):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:nk]' pivot='key' type='nominal' />
+            <column-instance column='[depression %]' derivation='None' name='[none:depression %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[location]' derivation='None' name='[none:location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]'>
+            <groupfilter function='member' level='[none:age:nk]' member='&quot;15-19 years&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:location:nk]'>
+            <groupfilter function='member' level='[none:location:nk]' member='&quot;Global&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]' included-values='in-range'>
+            <min>1990</min>
+            <max>2019</max>
+          </filter>
+          <slices>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]</column>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:location:nk]</column>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:Individuals using the Internet (% of population):qk]' field-type='quantitative' max='85.877687522782622' min='-46.718205677037986' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:Individuals using the Internet (% of population):qk]' scope='cols' value='Individuals using the Internet (% of population)' />
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:depression %:qk]' field-type='quantitative' max='3.4196040224948967' min='2.1453780955732333' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]' />
+              <lod column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]' />
+              <lod column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:location:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:depression %:qk]</rows>
+        <cols>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:Individuals using the Internet (% of population):qk]</cols>
+      </table>
+      <simple-id uuid='{850332B0-B158-41E0-80FB-D1405E0EDD02}' />
+    </worksheet>
+    <worksheet name='Depression vs Social Media Minutes'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='anxiety data+' name='federated.1j79kp90o32tyk1dedvzz1v95pz2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j79kp90o32tyk1dedvzz1v95pz2'>
+            <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+            <column caption='Avg Daily Time Spent Globally (Min)' datatype='integer' name='[avg daily time spent globally (min)]' role='measure' type='quantitative' />
+            <column caption='Depression %' datatype='real' name='[depression %]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:nk]' pivot='key' type='nominal' />
+            <column-instance column='[avg daily time spent globally (min)]' derivation='None' name='[none:avg daily time spent globally (min):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[depression %]' derivation='None' name='[none:depression %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year (Data)]' derivation='None' name='[none:year (Data):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[year (Data)]' role='dimension' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]'>
+            <groupfilter function='member' level='[none:age:nk]' member='&quot;15-19 years&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year (Data):qk]' included-values='in-range'>
+            <min>2012</min>
+            <max>2024</max>
+          </filter>
+          <slices>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]</column>
+            <column>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year (Data):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:avg daily time spent globally (min):qk]' field-type='quantitative' max='832' min='-1282' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:depression %:qk]' field-type='quantitative' max='4.5877377356474875' min='2.7601609659837485' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:depression %:qk]</rows>
+        <cols>[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:avg daily time spent globally (min):qk]</cols>
+      </table>
+      <simple-id uuid='{3FE94535-467D-43FD-86D2-C6F9B8CF46E6}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='37'>
+    <window class='worksheet' maximized='true' name='Anxiety vs Internet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]' type='filter' />
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{11926F3C-5AAC-428E-B7CD-68D96ADF2B24}' />
+    </window>
+    <window class='worksheet' name='Depression vs Internet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]' type='filter' />
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='1' param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D4F7F69A-BF13-4441-89AE-582927949474}' />
+    </window>
+    <window class='worksheet' name='Depression vs Social Media Minutes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]' type='filter' />
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year (Data):qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{54FFAEF9-0106-4F2A-B2E5-32AC275C47EC}' />
+    </window>
+    <window class='worksheet' name='Anxiety vs Social Media Minutes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:age:nk]' type='filter' />
+            <card param='[federated.1j79kp90o32tyk1dedvzz1v95pz2].[none:year (Data):qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AF751A6A-C860-4136-AEC1-F4E25C207628}' />
+    </window>
+  </windows>
+</workbook>
