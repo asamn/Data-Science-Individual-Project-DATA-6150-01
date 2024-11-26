@@ -4,4 +4,4 @@ This study examines the impact of internet and social media usage on the global 
 
 Findings reveal a minimally negative correlation between the average global time spent on social media and anxiety prevalence, but a minimally positive correlation with depression. For internet usage, there is a weak positive correlation with depression among youths less than 20 years of age. 
 
-![python](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png)
+![python](https://www.svgrepo.com/show/376344/python.svghttps://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png)
