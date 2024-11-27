@@ -1,7 +1,7 @@
 # Analyzing the impact of internet usage on depression and anxiety with Python
 
 
-![phone addiction](![gettyimages-558175143-612x612](https://github.com/user-attachments/assets/dbe9412d-c285-43f2-b6cb-c8b48bce2cde)
+(![gettyimages-558175143-612x612](https://github.com/user-attachments/assets/dbe9412d-c285-43f2-b6cb-c8b48bce2cde)
 
 
 This study examines the impact of internet and social media usage on the global prevalence of depression and anxiety by exploring whether the adoption of internet technology correlates with higher rates of reported depression. Using public datasets from The Institute for Health Metrics and Evaluation (IHME) and Our World in Data (OWID), the analysis employs Python tools like Pandas and NumPy for exploratory data analysis, SciPy-Stats for regression modeling, and MatPlotLib for visualization. 
